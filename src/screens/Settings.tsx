@@ -1,6 +1,8 @@
 import React from 'react';
 import {Text, StyleSheet, View} from 'react-native';
 
+import { colors } from '@/styles';
+
 const Settings = () => {
   return (
     <View style={styles.Container}>
@@ -16,7 +18,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'white',
+    backgroundColor: colors.white,
   },
   txt: {
     fontSize: 20,

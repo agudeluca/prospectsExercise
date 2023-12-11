@@ -1,12 +1,14 @@
 import {StyleSheet} from 'react-native';
 
+import { colors } from '@/styles';
+
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
     zindex: 10,
     borderRadius: 30,
     borderWidth: 10,
-    borderColor: 'white',
+    borderColor: colors.white,
   },
   menu: {
     width: 38,
@@ -16,7 +18,7 @@ const styles = StyleSheet.create({
   header: {
     fontSize: 25,
     fontWeight: '300',
-    color: 'silver',
+    color: colors.gray190,
     includeFontPadding: true,
     letterSpacing: 2,
   },

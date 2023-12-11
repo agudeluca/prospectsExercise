@@ -1,0 +1,18 @@
+# flow.yaml
+
+appId: com.agudeluca1.prospects-exercise
+---
+- launchApp
+- assertVisible:
+    text: "ALLS"
+    enabled: true
+- tapOn:
+    point: 50%,29%
+- assertVisible:
+    text: "MAKE PROSPECT"
+    enabled: true
+- tapOn:
+    text: "MAKE PROSPECT"
+    waitToSettleTimeoutMs: 500
+- tapOn:
+    text: "PROSPECTS"

@@ -65,7 +65,7 @@ const DrawerContent = ({navigation}: DrawerContentComponentProps) => {
   return (
     <Animated.View style={animatedStyles}>
       {/* @ts-ignore */}
-      <DrawerItem labelStyle={[styles.labelText, styles.boldText]} label="Beka" />
+      <DrawerItem labelStyle={[styles.labelText, styles.boldText]} label="CRM-M" />
       <DrawerItem
         label="Dashboard"
         labelStyle={getLabelStyles(Routes.dashboard)}

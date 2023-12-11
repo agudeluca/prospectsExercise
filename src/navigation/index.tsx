@@ -1,14 +1,13 @@
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import {NavigationContainer, useNavigationContainerRef} from '@react-navigation/native';
-import React, {useCallback, useEffect, useMemo, useRef} from 'react';
-import {Animated, View} from 'react-native';
+import React, {useCallback, useRef} from 'react';
+import { View} from 'react-native';
 
 import type {SetStateAction} from 'react';
 
 import DrawerContent from '@/navigation/DrawerContent';
 import ScreenContent from '@/navigation/ScreenContent';
 import {DrawerContext} from '@/providers/drawer';
-import {animation} from '@/utils/animations';
 
 import styles from './styles';
 

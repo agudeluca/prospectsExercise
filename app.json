@@ -23,10 +23,14 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.agudeluca1.prospectsexercise"
+      "package": "com.agudeluca1.prospects-exercise"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "packagerOpts": {
+      "config": "metro.config.js"
     }
   }
+
 }

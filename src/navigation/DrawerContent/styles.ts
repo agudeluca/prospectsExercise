@@ -1,5 +1,7 @@
 import {StyleSheet} from 'react-native';
 
+import { colors } from '@/styles';
+
 const styles = StyleSheet.create({
   drawerContainer: {
     marginLeft: 5,
@@ -18,7 +20,7 @@ const styles = StyleSheet.create({
   drawerLabelContainerActive: {
     borderRadius: 10,
     borderStyle: 'solid',
-    backgroundColor: 'rgba(255, 0, 0, 0.1)',
+    backgroundColor: colors.darkRed,
   },
   boldText: {
     fontWeight: 'bold',
@@ -41,7 +43,7 @@ const styles = StyleSheet.create({
   line: {
     width: '100%',
     height: 1,
-    backgroundColor: 'silver',
+    backgroundColor: colors.gray190,
     margin: 10,
     alignContent: 'center',
   },

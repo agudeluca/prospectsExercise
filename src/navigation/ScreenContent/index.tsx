@@ -6,12 +6,14 @@ import {TouchableOpacity, Image, Animated} from 'react-native';
 
 import type {DrawerNavigationProp} from '@react-navigation/drawer';
 
+import CloseSvg from '@/assets/close.svg';
 import menuIcon from '@/assets/menu.png';
 import {Routes, type RouteParamList} from '@/navigation/types';
 import {DrawerContext} from '@/providers/drawer';
 import Account from '@/screens/Account';
 import Dashboard from '@/screens/Dashboard';
 import Settings from '@/screens/Settings';
+import ValidationScreen from '@/screens/ValidationScreen';
 import {animation} from '@/utils/animations';
 
 import styles from './styles';
@@ -80,6 +82,14 @@ const ScreenContent = ({navigation}: ScreenOptionsProps) => {
     );
   }, []);
 
+  const renderGoBack = useCallback(() => {
+    return (
+      <TouchableOpacity onPress={() => navigation.goBack()}>
+        <CloseSvg width={40} height={40} />
+      </TouchableOpacity>
+    );
+  }, []);
+
   return (
     <Animated.View style={animatedStyles}>
       <Stack.Navigator
@@ -88,7 +98,7 @@ const ScreenContent = ({navigation}: ScreenOptionsProps) => {
           headerStyleInterpolator: HeaderStyleInterpolators.forUIKit,
           headerTransparent: true,
           animationEnabled: false,
-          headerTitle: 'START',
+          headerTitle: 'WELCOME',
           headerTitleStyle: styles.header,
           headerTitleAlign: 'left',
           headerLeft: renderMenuIcon,
@@ -97,6 +107,17 @@ const ScreenContent = ({navigation}: ScreenOptionsProps) => {
         <Stack.Screen name={Routes.dashboard} component={Dashboard} />
         <Stack.Screen name={Routes.account} component={Account} />
         <Stack.Screen name={Routes.settings} component={Settings} />
+        <Stack.Screen
+          options={{
+            headerShown: true,
+            presentation: 'modal',
+            headerTitle: '',
+            headerLeft: null,
+            headerRight: renderGoBack,
+          }}
+          name={Routes.validationScreen}
+          component={ValidationScreen}
+        />
       </Stack.Navigator>
     </Animated.View>
   );

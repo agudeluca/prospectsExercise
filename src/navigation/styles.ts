@@ -1,5 +1,7 @@
 import {StyleSheet} from 'react-native';
 
+import { colors } from '@/styles';
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -9,7 +11,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
 
-    backgroundColor: '#18162d',
+    backgroundColor: colors.darkPurple,
   },
   stack: {
     flex: 1,
@@ -22,7 +24,7 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 30,
     left: 0,
     width: '45%',
-    backgroundColor: '#18162d',
+    backgroundColor: colors.darkPurple,
   },
   menu: {
     width: 38,
